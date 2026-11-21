@@ -61,7 +61,7 @@
                         bindings = <
                                 &kp ES_TAB    &kp ES_Q &kp ES_W &kp ES_E    &kp ES_R    &kp ES_T        &kp ES_Y      &kp ES_U     &kp ES_I     &kp ES_O   &kp ES_P    &kp ES_BSPC
                                 &kp ES_LCTRL  &kp ES_A &kp ES_S &kp ES_D    &kp ES_F    &kp ES_G        &kp ES_H      &kp ES_J     &kp ES_K     &kp ES_L   &kp ES_NTIL &kp ES_TILD
-                                &kp ES_LSHIFT &kp ES_Z &kp ES_X &kp ES_C    &kp ES_V    &kp ES_B        &kp ES_N      &kp ES_M     &kp ES_COMM  &kp ES_DOT &kp ES_MINS &tog DEFAULT
+                                &kp ES_LSHIFT &kp ES_Z &kp ES_X &kp ES_C    &kp ES_V    &kp ES_B        &kp ES_N      &kp ES_M     &kp ES_COMM  &kp ES_DOT &kp ES_MINS &to DEFAULT
                                                                &kp ES_LALT &mo GAME2   &kp ES_SPACE   &kp ES_SPACE &kp ES_ENTER &kp ES_RGUI
                         >;
                 };
@@ -71,14 +71,14 @@
                                 &kp ES_TAB    &kp ES_1 &kp ES_2 &kp ES_3    &kp ES_4    &kp ES_5        &kp ES_F1      &kp ES_F2    &kp ES_F3     &kp ES_F4   &kp ES_F5    &kp ES_BSPC
                                 &kp ES_LCTRL  &kp ES_6 &kp ES_7 &kp ES_8    &kp ES_9    &kp ES_0        &kp ES_F6      &kp ES_F7    &kp ES_F8     &kp ES_F9   &kp ES_F10   &kp ES_TILD
                                 &kp ES_LSHIFT &trans   &trans   &trans      &trans      &trans          &kp ES_F11     &kp ES_F12   &trans        &trans      &trans       &trans
-                                                               &kp ES_LALT &mo GAME2   &kp ES_SPACE   &kp ES_SPACE &kp ES_ENTER &kp ES_RGUI
+                                                                &kp ES_LALT &trans      &kp ES_SPACE    &kp ES_SPACE   &kp ES_ENTER &kp ES_RGUI
                         >;
                 };
 
                 adjust_layer {
                         bindings = <
                                 &bootloader &sys_reset   &bt BT_PRV   &bt BT_NXT   &bt BT_CLR   &trans             &trans        &trans &trans &trans &trans &bootloader
-                                &trans      &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5       &trans        &trans &trans &trans &trans &tog GAME1   
+                                &trans      &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5       &trans        &trans &trans &trans &trans &to GAME1   
                                 &trans      &out OUT_USB &out OUT_BLE &trans       &trans       &trans             &trans        &trans &trans &trans &trans &trans  
                                                                       &kp ES_LALT  &trans       &kp ES_SPACE      &kp ES_SPACE &trans &kp ES_RGUI
                         >;      
