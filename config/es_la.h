@@ -106,7 +106,7 @@
 #define ES_SPACE    SPACE // Espacio
 #define ES_BSPC     BSPC // Retroceso
 #define ES_DEL      DEL // Suprimir
-#define ES_INS      NS // Insertar
+#define ES_INS      INS // Insertar
 
 // Navegación
 #define ES_LEFT     LEFT // Flecha izquierda
