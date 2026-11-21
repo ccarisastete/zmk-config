@@ -5,51 +5,80 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
+#include <es_la.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define NUMBER  1
+#define SYMBOLS 2
+#define CONTROL 3
+#define GAME1   4
+#define GAME2   5
+#define ADJUST  6
+
 / {
-        keymap {
+        keymap{
                 compatible = "zmk,keymap";
-
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                                &lt NUMBER ES_TAB   &kp ES_Q &kp ES_W &kp ES_E    &kp ES_R    &kp ES_T        &kp ES_Y      &kp ES_U             &kp ES_I     &kp ES_O   &kp ES_P    &kp ES_BSPC
+                                &mt ES_LCTRL ES_ESC &kp ES_A &kp ES_S &kp ES_D    &kp ES_F    &kp ES_G        &kp ES_H      &kp ES_J             &kp ES_K     &kp ES_L   &kp ES_NTIL &kp ES_TILD
+                                &kp ES_LSHFT        &kp ES_Z &kp ES_X &kp ES_C    &kp ES_V    &kp ES_B        &kp ES_N      &kp ES_M             &kp ES_COMM  &kp ES_DOT &kp ES_MINS &mt ES_RSHIFT ES_APOS
+                                                                      &kp ES_LALT &mo CONTROL &kp ES_ESPACE   &kp ES_ESPACE &lt SYMBOLS ES_ENTER &kp ES_RGUI
                         >;
                 };
 
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+                number_layer {
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                                &trans       &trans &trans &trans      &trans &trans          &kp ES_SLSH   &kp ES_7     &kp ES_8    &kp ES_9 &kp ES_ASTR &kp ES_BSPC
+                                &kp ES_LCTRL &trans &trans &trans      &trans &trans          &kp ES_MINS   &kp ES_4     &kp ES_5    &kp ES_6 &kp ES_PLUS &trans
+                                &kp ES_LSHFT &trans &trans &trans      &trans &trans          &trans        &kp ES_1     &kp ES_2    &kp ES_3 &kp ES_0    &trans
+                                                           &kp ES_LALT &trans &kp ES_ESPACE   &kp ES_ESPACE &kp ES_ENTER &kp ES_RGUI 
+                        >;
+
+                };
+
+                symbols_layer {
+                        bindings = <
+                                &kp ES_TAB   &kp ES_DQUO  &kp ES_AT   &kp ES_LPRN &kp ES_RPRN  &kp ES_PERC     &kp ES_EQL  &kp ES_PLUS &kp ES_MINUS &kp ES_LABK &kp ES_RABK &kp ES_BSPC
+                                &kp ES_LCTRL &kp ES_IQUES $kp ES_QUES &kp ES_LBRC &kp ES_RLBRC &kp ES_APOS     &kp ES_DGR  &kp ES_HASH &kp ES_SLSH  &kp ES_PIPE &kp ES_BSLS &kp ES_DLR
+                                &kp ES_LSHFT &kp ES_IEXCL &kp ES_EXCL &kp ES_LBKT &kp ES_RBKT  &kp ES_NOT      &kp ES_ASTR &kp ES_GRV  &kp ES_CIRC  &kp ES_DIAE &kp ES_AMPR &kp ES_TILDE
+                                                                      &kp ES_LALT &mo ADJUST   &kp ES_ESPACE   &kp ES_ENTER &trans &kp ES_RGUI
+                        >;
+                };
+
+                control_layer {
+                        bindings = <
+                                &kp ES_TAB   &trans &trans       &trans      &trans       &trans              &trans        &trans         &kp ES_UP        &trans       &trans &kp ES_DEL
+                                &kp ES_LCTRL &trans &kp ES_LSHFT &kp ES_LALT &kp ES_LCTRL &kp ES_LGUI         &trans        &kp ES_LEFT    &kp ES_DOW       &kp ES_RIGHT &trans &trans
+                                &kp ES_TAB   &trans &trans       &trans      &trans       &kp K_VOL_DN        &kp K_VOL_UP  &kp K_PREVIOUS &kp K_PLAY_PAUSE &kp K_NEXT   &trans &trans
+                                                                 &kp ES_LALT &trans       &kp ES_ESPACE       &kp ES_ESPACE &mo ADJUST     &kp ES_LGUI
+                        >;
+                };
+
+                game1_layer {
+                        bindings = <
+                                &kp ES_TAB   &kp ES_Q &kp ES_W &kp ES_E    &kp ES_R    &kp ES_T        &kp ES_Y      &kp ES_U     &kp ES_I     &kp ES_O   &kp ES_P    &kp ES_BSPC
+                                &kp ES_LCTRL &kp ES_A &kp ES_S &kp ES_D    &kp ES_F    &kp ES_G        &kp ES_H      &kp ES_J     &kp ES_K     &kp ES_L   &kp ES_NTIL &kp ES_TILD
+                                &kp ES_LSHFT &kp ES_Z &kp ES_X &kp ES_C    &kp ES_V    &kp ES_B        &kp ES_N      &kp ES_M     &kp ES_COMM  &kp ES_DOT &kp ES_MINS &tog DEFAULT
+                                                               &kp ES_LALT &mo GAME2   &kp ES_ESPACE   &kp ES_ESPACE &kp ES_ENTER &kp ES_RGUI
+                        >;
+                };
+
+                game2_layer {
+                        bindings = <
+                                &kp ES_TAB   &kp ES_1 &kp ES_2 &kp ES_3    &kp ES_4    &kp ES_5        &kp ES_F1      &kp ES_F2    &kp ES_F3     &kp ES_F4   &kp ES_F5    &kp ES_BSPC
+                                &kp ES_LCTRL &kp ES_6 &kp ES_7 &kp ES_8    &kp ES_9    &kp ES_0        &kp ES_F6      &kp ES_F7    &kp ES_F8     &kp ES_F9   &kp ES_F10   &kp ES_TILD
+                                &kp ES_LSHFT &trans   &trans   &trans      &trans      &trans          &kp ES_F11     &kp ES_F12   &trans        &trans      &kp trans    &trans
+                                                               &kp ES_LALT &mo GAME2   &kp ES_ESPACE   &kp ES_ESPACE &kp ES_ENTER &kp ES_RGUI
+                        >;
+                };
+
+                adjust_layer {
+                        bindings = <
+                                &bootloader &sys_reset   &bt BT_PRV   &bt BT_NXT   &bt BT_CLR   &trans
+                                &trans      &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5
+                                &trans      &out OUT_USB &out OUT_BLE
                         >;
                 };
         };
