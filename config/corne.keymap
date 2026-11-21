@@ -5,7 +5,7 @@
  */
 
 #include <behaviors.dtsi>
-#include <es_la.h>
+#include "es_la.h"
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
