@@ -11,11 +11,11 @@
 
 
 #include <zephyr/dt-bindings/gpio/gpio.h>
-/*
- *&nice_view_spi {
- *    cs-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>;
- *};
- */
+
+&nice_view_spi {
+    cs-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>;
+};
+
 
 #define DEFAULT 0
 #define NUMBER  1
