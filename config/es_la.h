@@ -87,7 +87,7 @@
 // Otros símbolos
 #define ES_PIPE     GRAVE // |
 #define ES_DEGR     LS(GRAVE) // °
-#define ES_NOT  RA(GRAVE) // ¬
+#define ES_NOT      RA(GRAVE) // ¬
 #define ES_LABK     NUBS // <
 #define ES_RABK     LS(NUBS) // >
 
