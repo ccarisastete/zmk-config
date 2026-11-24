@@ -60,7 +60,7 @@
                         bindings = <
                                 &kp ES_TAB   &trans &trans       &trans      &trans       &trans              &trans        &trans         &kp ES_UP        &trans       &trans &kp ES_DEL
                                 &kp ES_LCTRL &trans &kp ES_LSHIFT &kp ES_LALT &kp ES_LCTRL &kp ES_LGUI         &trans        &kp ES_LEFT    &kp ES_DOWN       &kp ES_RIGHT &trans &trans
-                                &kp ES_TAB   &trans &trans       &trans      &trans       &kp K_VOL_DN        &kp K_VOL_UP  &kp K_PREVIOUS &kp K_PLAY_PAUSE &kp K_NEXT   &trans &trans
+                                &kp ES_TAB   &trans &trans       &trans      &trans       &kp C_VOLUME_DOWN        &kp C_VOLUME_UP  &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT   &trans &trans
                                                                  &kp ES_LALT &trans       &kp ES_SPACE       &kp ES_SPACE &mo ADJUST     &kp ES_LGUI
                         >;
                 };
@@ -76,7 +76,7 @@
 
                 game2_layer {
                         bindings = <
-                                &kp ES_TAB    &kp ES_1 &kp ES_2 &kp ES_3    &kp ES_4    &kp ES_5        &kp ES_F1      &kp ES_F2    &kp ES_F3     &kp ES_F4   &kp ES_F5    &kp ES_BSPC
+                                &kp ES_ESC    &kp ES_1 &kp ES_2 &kp ES_3    &kp ES_4    &kp ES_5        &kp ES_F1      &kp ES_F2    &kp ES_F3     &kp ES_F4   &kp ES_F5    &kp ES_BSPC
                                 &kp ES_LCTRL  &kp ES_6 &kp ES_7 &kp ES_8    &kp ES_9    &kp ES_0        &kp ES_F6      &kp ES_F7    &kp ES_F8     &kp ES_F9   &kp ES_F10   &kp ES_TILD
                                 &kp ES_LSHIFT &trans   &trans   &trans      &trans      &trans          &kp ES_F11     &kp ES_F12   &trans        &trans      &trans       &trans
                                                                 &kp ES_LALT &trans      &kp ES_SPACE    &kp ES_SPACE   &kp ES_ENTER &kp ES_RGUI
