@@ -16,6 +16,9 @@
     cs-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>;
 };
 
+&nice_view {
+    spi-max-frequency = <500000>;
+};
 
 #define DEFAULT 0
 #define NUMBER  1
