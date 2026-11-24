@@ -62,8 +62,8 @@
 // Puntuación
 #define ES_APOS     MINUS // '
 #define ES_QUES     LS(MINUS) // ?
-#define ES_IEXCL    EQUAL // ¡
-#define ES_IQUES    LS(EQUAL) // ¿
+#define ES_IEXCL    LS(EQUAL) // ¡
+#define ES_IQUES    EQUAL // ¿
 #define ES_COMM     COMMA // ,
 #define ES_DOT      DOT // .
 #define ES_SCLN     LS(COMMA) // ;
@@ -81,8 +81,8 @@
 #define ES_ASTR     LS(RBKT) // *
 #define ES_LBRC     APOS // {
 #define ES_RBRC     BSLH // }
-#define ES_LBKT     RA(APOS) // [
-#define ES_RBKT     RA(BSLH) // ]
+#define ES_LBKT     LS(ES_LBRC) // [
+#define ES_RBKT     LS(ES_RBRC) // ]
 
 // Otros símbolos
 #define ES_PIPE     GRAVE // |
